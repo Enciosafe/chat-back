@@ -5,12 +5,12 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const server = require('http').createServer(app)
+const server = require('https').createServer(app)
 
 const io = require('socket.io')(server,{
     cors: {
         origin: "https://simple-chat-node-react.herokuapp.com/",
-        methods: ["GET", "POST"]
+        methods: ["get", "post"]
     }
 });
 
